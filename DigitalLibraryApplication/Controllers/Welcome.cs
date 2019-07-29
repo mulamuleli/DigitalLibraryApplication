@@ -13,7 +13,7 @@ namespace DigitalLibraryApplication.Controllers
         // GET: /<controller>/
         public IActionResult Index()
         {
-            ViewData["Message"] = "welcome to my digital library application";
+            ViewData["Message"] = "welcome to my digital library application this things is not easy";
 
             return View();
         }
