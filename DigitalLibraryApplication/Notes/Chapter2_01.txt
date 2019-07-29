@@ -1,0 +1,63 @@
+﻿in this chapter we are ging to configure Entity Framework
+- we will also learn how to use postgre SQL 
+- we will see how we can add models and run migration
+- we will also implemenservice layer patterns
+
+
+======================================================================
+      Configuring Entity Framework
+======================================================================
+* we need to see the overview of entity framework
+* we will also have to see how to implement model and DbContext
+* we will learn how to inject and configure DbContext
+
+what is entity framework?
+-  it is an Obeject-Relational Mapper(O/RM)
+- it enables .NET developers to work with Database using .NET Objects.
+- so it eliminates the need  for most of the data-access code thta developers usually need o write.
+
+ entity framework workflow
+
+ at the top we have:
+ UI Layer >> Business Logic Layer >> Data Acces Layer [Entity Framework] >> DB
+
+
+ EF benefits
+ - cross platform
+     you wil be able to run this code in mayplattfrom
+	 querying is a lot easier. we will use linq 
+	 transaction are automamtic
+	 migrations
+
+
+Approaches for EF
+1. Database first approach
+- we create a database and then use EF to create domain objects and to build code ontop
+2. code fist approach
+- we are gong to use this approach.
+-in a nutshell we will fist write the code including the main objects and then entity framework will know how to create
+know how to create tables with those onjects..
+
+* start by creating classes for our domain that we will rely on
+   -DbContext
+      this way EF will know what need to be creaeted
+	a class that require DbConext class should be derived from DbContext class
+	 so that class will expose DB set properties for the types that  you want to be part of the  model
+
+
+	working wiht Audio Books.
+
+	1. Implement Model.
+	  define model class
+	  there wont be test
+
+	2. Implement DbContext.
+	 add a new class called DigitalLibraryContext in the Models folder
+	 - add some constructors
+	 - we need to register our context as a servies in our application using the 
+	       
+
+
+	3. Configure dBContext.
+
+	up to this far we have configured our entity framework.....

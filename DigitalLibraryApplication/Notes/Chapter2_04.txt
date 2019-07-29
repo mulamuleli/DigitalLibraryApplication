@@ -1,0 +1,35 @@
+﻿					IMPLEMENTING THE SERVICE LAYER
+1. what is Service Layer in ASP.NET
+2. why do we need abstration
+3. writing Service Layer Inteface
+4. Adding Service Layer
+5. Mocking DbCOntext and DbSet
+
+# the service layer is actualy used to seprate the presentation layer and the database accss  layer
+  - it implements some business logic and helps us further seperate concerns
+  - this layr uses units of work and repositories and bind them in business logic and connects business logic
+  with.
+  - looking into our mvc application this means that our database code  should not be in our controller.
+  - our business logic should be placed in services and our database logic should be in entity framework.
+
+  Service Layer Definition
+  - the service layer defines an applications boundary with a layer of services that establishes set of available
+  operations and cordinates the applications response in each operation
+
+  the Purpose of service layer is
+  - it decouples code from persistance frameworks and to make sure the presentation layer(controllers doesnot know anything about the data access layer
+
+
+  =========================================
+   our first service
+   =======================================
+   1. AudioBookService
+    * GetAll()
+	- we only have one functin now which is the initial implementation
+	this service will use entity framework(DbContext)  to define the business logic 
+
+	create an integration test for AudioBookServices first..
+	then add a new folder called Services in  your application.
+	 - add an interfac clasc called IAudioBookService.cs 
+	 - add a unit test for AudioBookService
+	 - create a new class called AudioBookServiceUnitTest and make the class public

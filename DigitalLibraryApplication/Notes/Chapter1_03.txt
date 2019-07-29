@@ -1,0 +1,86 @@
+﻿creating an mvc project
+we will create ASP.Net core  2.0 MVC project in visual studio 2017, we will see how one can get to add a controller a view and a mdoel
+
+1. create a new project in visual project
+   - .Net Core
+   - ASP.NET Core Web Application
+   - select Web APplication Model(Model View Controller)
+
+
+   our project is called  DigitalLibraryApplication
+   - we are goig to developm an application for managing books.
+   
+by Default we will have a HomeController Moel Folder and View Folder
+
+
+adding our first controller.-  go to the Controllers folder and Add a new Item  or and MVC controller Class
+     give it a name Welome.cs
+	  in the  welcome we are havng and index method which is the metod that is going to be initaiated when we first compile this controller
+	  - the Welcome clas implements Controller class  which is an abrstract class defined in  AspNetCore.Mvc
+
+	  ## one thing you have to note is that when you create a new controller, its method can be registered as a route
+	        e.g  public class  Welcome : Controller
+			{
+			    public string Index()
+				{
+				    return View();
+
+				}
+			}
+			 this calls has already create a Route URI : localhos:50107/Welcome/Index
++=======+++++++======
+   try it out
+   ++++++====++++
+
+* even if you have to add more methods t the controller thier names will be registerd as routes in the
+
+8 add  another method
+ public  string Description()
+ {
+  return "this is an application for managing books
+ }
+
+ ======================================================================
+     up to know everything is working so fine
+	 ===============================================
+
+
+
+**** adding a View()
+- add a new flder call IT Welocme in the Views folders and then ceate a new MVC View Page  with .cshtml extension
+ --  here we simply want to have a title. an a message which has been passed from the controller
+
+ <h2> Library </h2>
+    <div @ViewData["Message"]</div>
+
+	however into our  Welcome Controller
+	 
+	 we have to make sure the retun type  of the Index() method is IActionResult
+	 and we want aour ViewData to pass some mesage to the view
+	     ViewData["message"] = "welocme to my Digital Library";
+		   return View();
+
+
+		    so far everything is woking
+
+
+			 lets add a new model
+
+-- in the models folder we will add a neew class item and give it a nanme.Book.cs
+
+int the model class you can  implent the following code:
+
+
+==================================
+namespace DigitalLibraryApplication.Models
+{
+    public class Book
+    {
+        public string Author { get; set; }
+        public string Title { get; set; }
+    }
+}
+
+##  we will add some new staff later in the model and get to talk about entity framework
+
+finally let do scaffolding

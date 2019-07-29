@@ -1,0 +1,26 @@
+﻿we are going to use layout views in our C# applications
+ we will cover the foollowing
+ 1. what layout iew is
+ 2. the benefits of using layout view
+ 3. implementation
+
+ a layout is a view which contail common UI parts.
+   - header
+   - Lefy Menu
+   - Footer
+   - Dynamic conent
+   thses part may remain the same throghout th application
+
+    what we are trying to achive is trying to prevent  writing the header the left menu and the footer in every view that we have
+
+	 the layout wll define the common site template
+	 - it also provide our application with  consistent look and fill
+	 -layout reduces duplicate code in view which give us the ability to do dont repeat your self principle/.
+
+
+	implementing layouts in C#
+	 navigate t  Views/shared/_layout.cshtml
+
+	 open ViewStart.cshtml to
+
+	  i guew now we know how layout works

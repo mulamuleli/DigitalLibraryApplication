@@ -1,0 +1,17 @@
+﻿in these application we are going to present ways to appy test driven deveopment
+principles in mordern  web development with .NET Core
+
+we  are going to build a single .NET Cre application and in each section we ae going
+to focus o a specific components of the MV Stack..
+
+1. understandning What Patterns is?
+2.creating models and data
+3. writing Frameworks for Controlers
+4. views
+5. learning Continuous Integration and Examples
+
+ requirements of these course
+ 1. be familiar  with Concepts of C# language
+ 2. undertsand visual studio 2017
+ 3. some Experience in unit testing 
+

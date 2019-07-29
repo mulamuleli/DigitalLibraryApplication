@@ -1,0 +1,11 @@
+﻿in this video we are going to learn how to add .Net Services, configure them and finally how to tests mthem
+
+as we know that the start up class is responsible of configuring our webhost  . 
+ in the start up class we have the COnfigureServices method which is responsible for dependency injection of
+ the services.
+
+
+
+ here we are goig to implement a service caled Emailservices 
+
+ 1. let create a test for email service

@@ -1,0 +1,41 @@
+﻿working with alternatve bdatabases for entityframework
+ 1. postgreSQL
+
+ About PostgreSQL 
+ - it is an Open Source , Object Relational Database Management System ( OSRDBMS) based on Postgres
+ - developed at the university of California
+ - it uses clients/serer model
+ a server process- postgres, which manages the database files, accepts connection to the databases from client application
+    and performs database actions on behalf of the client..
+
+- if the client and the server ae on different hosts, they communicate over a TCP/IP network connection.
+
+
+
+you can install postgresql from an exe file.
+- install it..
+-open pgAdmin 4
+ authenticate.... to log into our PostgreSQL server
+
+
+nw we need to intall a package into our DigitalLibrryApplication to run PostgreSQL
+
+     run : dotnet dd package Npgsql.EntityFramework.PostgreSQL
+
+	The big question i shuold we change anything in the DigitalLIbraryCOntext.cs class?
+     - NO,
+
+	  we only need to change the startup class and define a new service  which will use postgreSQL instead of SQLServer
+	    and change the defaul cnnection 
+		 in the startup class
+		 this is what you hve to do   
+
+		==================================
+		    services.AddEntityFrameWorkNpgsql().AddDbContext<DigitalLibraryContext>(options => options.UseNpgsql(connection));
+=============================================
+
+ you also need to change the defaultConnetion String in the appsetting.json
+ //"DefaultConnection": "Server=localhost;Database=DigitalLibrary;Username=postgres;Password=NikolAten111"
+
+  check everything i postGreSQL
+  

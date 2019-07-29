@@ -1,0 +1,67 @@
+﻿Adding Model and Running Migration
+
+here we te going to learn how to keep ourdatabase updated during our development
+
+ 1. what are migrations and what are the benefits of using a migration.
+ 2. we will learn how to use the Command line to create migrations	and to get familiar with the migrations table. 
+ 3. we ill also need to get familiar with updating the database.
+
+  what is a migration?
+   a migrations provide a way to incrementally apply chema changes to the dtabases to keep it in sync
+   with EF Core model preserving existing data in the database
+     when we are developing applications, our data and table  structures can change frequently sinc we are using  code first approach..
+
+
+	 our database is direced by the way pour code is changing, migrations gives us a way to keep thses objects and tables to 
+	 in syc.
+
+	 # to use migrations we use the NET Coe CLI - dotnet ef.
+
+	  in our DigitalLIbaryApplication we deed to add the following package
+
+	  <ItemGroup>
+	  <DotNetCliToolReference Include= "Microsoft.VisualStudio.Web.CodeGeneration.Tools" Version = "2.0.3"/>
+	   <DotNetCliToolReference Include= "Microsoft.EntityFrameworkCore.Tools.DotNet" Version = "2.0.2"/>
+	   </ItemCore>
+	     
+
+   update your project 
+    run: dotnet restore  
+
+	run dotnet ef
+	 make sure you see the unicorn
+	  
+
+	  run dotnet ef database drop
+
+	   refresh the SQL studio. to ssee if the databse still exist
+
+	    run : dotnet ef dbcontext info
+
+lets now create our first migration  
+run: dotnet ef migrations add InitialMIgration
+
+ check you visual studio  to see if  new folder called Migrtions is create in the root of the application.
+   -a file wih a timestamp and a name
+    with the up and down method used for creating and dropping a dayabae respectively.
+
+
+	 run : dotnet ef database update
+
+	 refressh  the sql server
+
+	 add  another model class called DigitalBook
+	 add a new  method in the dbcontext 
+	  then dd add a new table using the dotnet ef command
+
+	  run  dotnet ef migrations add  AddDigitalBooksTable 
+	   go back to visual studio to see if the migration file is created related to it
+
+	     run dotnet ef Database update .
+		  check you sql server and refresh t see the digital books table
+
+	rolling back  in time
+	. dotnet ef databse update InitialMigrtion....
+	 resresh sql server to see if the initial migration worked
+
+

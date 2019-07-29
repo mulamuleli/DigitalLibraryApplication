@@ -1,0 +1,49 @@
+﻿View components
+
+what are view components.
+What are the benefits of using view components
+how can we implement view Components.
+
+ View Componnet are very simillar to the Partial Views but they are much more powerful than partial view.
+  - this is because they dont use model binding
+   and they ponly depend on the data provided when calling into it
+  - they are intednded to be used anywhere where you have reusable rendering logic thats too complex for partial view..
+  - they are typically invoked from layout page but you call also called it from anywhere. 
+  benefits
+
+  - it includes the same seraration of concern and testability benefits found between controller and view.
+   we can have parameters as well as business logic attached to a certain view which is 
+
+    structure of view components.
+it is containing of  two parts the firts part 
+1. the class that is deriving from the ViewComponents.
+2. th resulst that it returns, typicall a view.
+
+it is similar to trh view controller but on the smaller scale
+ - yiu can crate smaller view components and in that way you can create the whole application 
+
+ creating the view Component
+ 1. Deriving from ViewComponent
+ 2. we can be decorating a class with the [ViewComponent] attriute,or deriving from a class with the [ViewCompoment] attribute
+ 3.  create a class where the name end with the suffix ViewComponent
+
+ lets get started.
+
+ in index.cshtml
+
+ create a new folder in the root of the application called ViewComponents
+ - add a new class calle DummyAudioBookCreator
+
+  we want to create an example of how you can create view component 
+
+ - every viewcomponent must have  InvokeAsync method  in which we can  pass as much parameters we can but for now
+ we will just pass one parameter which is called numOfAudioBooks and that is actually the number of  DummyAudioBookCreator that \
+ that this method will create and then return it as a viewcomponentresult interface
+
+
+ in the views folder add anotherfolder called Components
+  add a new folder inside again called DummyAudioBookCreator
+  - create a default cshtml file
+      there you can write your logic
+
+	   in the index use the @await compponent.InvokeAsync(DummyAudiocreator)

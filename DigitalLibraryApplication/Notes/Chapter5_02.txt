@@ -1,0 +1,32 @@
+﻿Jenkins
+ - it is number one open source project for automating with a lot of plugins
+ -it works as a stand aloine continuous integration server
+ - it contain pre built packages for unix windoes linux and OS X
+
+ Travis CI
+ - it is  free public open Source projected on github
+ - it is a platform that is used for automating processes for  for testing and deployment of application 
+ - it is free for public open source prjects on github
+ - it is user frinedly
+ - here automated pull requests verification
+ - it has a greate api for Customization
+
+ Team City
+  - it is one of the biggest player in the market as Jetbrains is standingbehind it
+  - its intelligent continuous integration server solution for software environtment is if all sizez
+  -it has included support for Visual studio, tool Versioning frame work , code cpverage and code analysis
+  - it is quit intuitive with a lot of features that can make your life easier
+  - it has detail history reports for builds failure and any addditional changes made
+  - it is also quite scalable vbecasue it takes advantage of cloud computing, by dynamically scalling the output of the build agents amaz ec tolols and microsoft visual studio
+
+  GitLab CI tools 
+  - it is integrated direclly into the GitLab workflow
+  - it is possibe to scale it and add additionl machiines to scale tour tests for perfomance
+  - build script can be programmed in any language 
+  - easy to roll back
+
+  AppVeyor CI
+  - it is a windows only cloud based service for testing, buidling and deployin windows applications.
+ in the cloud or in a physical server enviromtnets
+ - it is one in all continous delivery platform
+ - it is also possible to add ssd drives with dedicated hardware to provide  fast speeds...

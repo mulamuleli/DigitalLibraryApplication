@@ -1,0 +1,19 @@
+﻿@model IEnumerable<DigitalLibraryApplication.Models.AudioBook>
+
+<h3>Suggested Audio Books</h3>
+<tbody>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Title)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Subtitle)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Summary)
+            </td>
+        </tr>
+    }
+</tbody>

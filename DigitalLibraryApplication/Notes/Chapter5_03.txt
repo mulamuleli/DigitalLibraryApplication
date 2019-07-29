@@ -1,0 +1,35 @@
+﻿Using GitHub and Travis CI
+
+here we are going to leanr how to connect travis with git hub
+2. configuring buiil and testing on travis ci for .net 2.0
+3. continuoous development example
+
+open you git hub account
+- you should have your porject on git hub
+open you travis account
+ - you can always connect your travis account with travis ci.
+ - you can always snc accounts-
+ - you can alson see  that you have your repository from git hub
+ - you can turn on and turn off automatic buildsbut keep it turned on 
+
+  before you start building your project on travis you have to make sure that you have a .travis.yml file
+
+  in this file we are definging  what travis should actualy do
+   ==========================================
+   language: csharp
+   solution: ./DigitalLibraryApplication.sln
+   dist: trusty
+   mono:none
+   dotnet: 2.0.0
+   install:
+        - dotnet restore
+	script:
+	- dotnet build
+	- dotnet test ./DigitalLibraryUnitTests/DigitalLibraryUnitTests.csproj
+
+	 to test if this is working you will neet to add another test 
+	 - cmmit the test to git hub  using git commit master
+	 - open travic ci pannel to see if the build has already started
+
+	  this is how we use Github & travic CI to build our application in continuous integration  manner
+	  - we add tests  and it ill be automatically run in the build server as well 

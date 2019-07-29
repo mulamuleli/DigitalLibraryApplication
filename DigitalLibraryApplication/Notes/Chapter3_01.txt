@@ -1,0 +1,59 @@
+﻿in ythe previous chapter we learned how to implement model and entity frame work
+
+we are going to learn to writte frameworks for controllers..
+1.  we are going to build two tyes of controllers.
+   1. the restful api controller- restful API will help apis will be able to aces or data 
+   2. the MVC Contoller - they rtun view operations and other operations..
+
+lets start with resful  API  Controller 
+ - we will learn what is a restful API and we want to implement this kind of API for AudioBooks.
+  RESTful API
+   Representational State Transfere (REST) is an architecture style that defnes a set of Constraints
+   and properties based onf HTTP
+
+   - it is an application program interface that uses http requests to GET, PUT, POST and DELETE some Data.
+   
+   the REST architectual style describes six Constraints..
+      *  these constraints applied to the architecute were originally communicated by roy fielding in his doctral dissertation
+	   - uniform interface
+	   - client-server
+	   - statelessness
+	   - cacheable
+	   - Layered system
+       - code on demand
+
+- fistly we are going to see how we extended AudioBookService
+- we will then implement the method that will implement GET,POST,PUT AND DELETE in the AudioBookAPI controller.
+- then we will test our application
+
+ our controller will comunicate with our dataase access layer..
+    eg the audiobook service which is wrapping up the entity frame work
+	 we wiil have a RESTful API  Controller
+
+	  routes are named automatically by the asp.net framework
+
+	lets get started.
+	1. un the IAudioBookService.
+       - extend the methods.  
+	        AudioBook GetById,Add,Update,Delete  
+
+2. you can do the implementation in the AudioBookService class.
+3. now add the AudioBookApiController- use an emptey api controller class
+    - start by the test class in the Unitest classa
+	  - start by implemnnting  a method that will get all audio books
+	  then build it to see of there are dome errors..
+4 if there are no errors you can then test the errors and run .....
+
+for every method that we implement, we hve to run a test for it..
+
+ lets ge started/.
+
+
+
+
+	    
+
+   
+
+
+

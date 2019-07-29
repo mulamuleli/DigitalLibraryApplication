@@ -1,0 +1,29 @@
+﻿ew have implemented the RESTFUL api Controller
+ now we want to write MVC controller.
+ - wewill implement one controller manualy 
+ - we will se how we can automtilly implement one
+
+ 1. we will add a test for functionality, 
+ 2. add implementation 
+ 3. add a simple view.
+
+lets start wth the code
+
+we need to have a new  interface class called IAudioBookServiceAsync..
+ NB: in our index page we need to  to show a table with the following columns:
+   title, sybtitile, summary,
+   delete link and edit link and a create new book link or tab.
+
+   1.we need 
+   - an interface class and and  implementation of that interace class.
+   - we are using async because we dont want to block our users/ or clients requests
+   2. wealso need to ad a new controller called AudioBookManualController
+   3. and another class callled AudioBookServiceAsync to implement our Interface for Audio book  
+   4. you alwo need to create a manualcontroller test
+   5. add a new folder in the views called AudioBookManual and add the following sub files;
+      - Create.cshtml
+	  - Delete.cshtml
+	  - Edit.cshtml
+	  - Index.html
+
+	  we can also create mvc controllers in visual studio

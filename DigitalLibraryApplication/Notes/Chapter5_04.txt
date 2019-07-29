@@ -1,0 +1,25 @@
+﻿using github and appveyor
+ - we will lern how to conect apveyor with github
+ - how we can configure buid and testing on appveyor for dotnet core2.0
+ - continous  development example...
+
+  log in to  appveyor with github account
+   you need t have two files in order to ue appveyor.
+   1. appveyor.yml
+   2. a global.json file
+   global.json file looks like
+    =====================
+	{
+	    "sdk": {
+		   "version" : "2.0.0"
+		   
+	  }
+	}
+	 amd the  appveyor. yml
+
+	 get that yml file template in th escreen shorts
+
+
+	 add a new test in the code...
+	 to see it audiobookmanualcontroller  will throw an exception if audiobook service throws and exception
+	 start a new build napveror

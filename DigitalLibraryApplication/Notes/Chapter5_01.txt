@@ -1,0 +1,49 @@
+﻿Learning Continuous integration  with examples..
+ in this chapter we are  going to learn
+ 1. what is continous integration 
+ 2. what is continuous deployment
+ 3. continuous development
+ 4. what are the major continous integration tools 
+ 5  we wil learn to use Travis CI nd AppVeyor..
+
+ exploring continuous integration and continuous deployment
+
+ 1. what is continuous integration.
+ 2. what is continous Deployment
+ 3. what is continuous development
+ 4. what are the difference between these words.
+
+ * continuous integration
+ - it is a process in which developers merge their changes back to the main branch as often as possible
+ - the developers changes are validated by creating a buind and runing an automated test against the build
+ - by doing so we are avoiding integration hell
+ - continoousintegration puts more enphasis on test automation to check that the application is not broken upon ny new commit
+ - developers merge changes directly or as often as possible to the main branch, the build is then run and then automated tests verify
+  that the application is still good
+
+* continuous delivery
+- it is anextention of Continuous integration
+- it is always making sure you ca release new changes to your customers quickly iin a much more sustainablt way with  click of  button
+- ontop of having automated test you also have the automated release process, so you can deploy your application
+  basically on a daily weekly or what ever schedule you want
+- here every changes that passes all the stages of your production pipeline is released to the customers
+     so this means that onces the build is done then automatd testsand all changes are automatically deployed
+	 to production
+	 - so there wont be any huma intevation
+	 - only failed test will prevent  new change to be deployed
+
+	  continuous integration and continuous Delivery
+	  build   ===>> test ==>> deploying to staging ==>> acceptance tests ==> Manual deploying to production ==>> smoke tests
+
+	  continuous integration and continous development
+	  build   ===>> test ==>> deploying to staging ==>> acceptance tests ==> Automatic deploying to production ==>> smoke tests
+
+
+
+	  what are the benefits pf all these practices
+	  - less bugs will get shipped to production as regressions are captured early by authomated tests
+	  - the complexity of deploying a software has been taken away
+	  - faster development because the release dont pause it..
+
+	  \
+

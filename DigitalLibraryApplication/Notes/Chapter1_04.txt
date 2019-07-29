@@ -1,0 +1,34 @@
+﻿ creating a test project
+ * wenwill learn how to create a test project in visueal studio.
+ * we will spend a lot of time in this project running unit tests for our components
+
+ in thius chapter we wil try to reate unit tests and integration nd functional tests for the ASP.NEt Core Application
+
+ lets get started..
+
+ * nest a new Project in  your DigitalLibraryApplication of type xUnit called DigitalLibraryUnitTests
+
+
+ we can also use the Command LIne Tool in thestudion t create tests projects using the dotnet dependency manager..
+
+===========================================================================================
+ STRUCTURE OF OUR APPLICATION
+ ==========================================================================================
+  
+#  The Program Class is the atual entry point of our Application. 
+    - it has the main method and in the manin method we we calling the BuildWebHost() and Run() methods
+
+	 the BuildebHost method is acually creating IWebHost
+	 --   it is very important because  we are also using the startup class to configure everythung in our application
+
+	  in the startup class we can create services using the ConfigureServices()  and we can also use the Configure() method
+	  to register some middlewre which we will also dissuc in the futute
+
+the question is how can we get to mimic this behavior in our program.cs in our tests. and that is our goal... we are also lucky because 
+we have something called the test server
+ now we well nned to create a new test called IntegrationTests.cs
+
+
+  for now the the integration test is not  working and i dont know why but i will fix it later..
+  --------------------------------------------------____________________________-------------------
+

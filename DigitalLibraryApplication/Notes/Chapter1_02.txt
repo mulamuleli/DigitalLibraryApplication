@@ -1,0 +1,41 @@
+﻿learning to create MVC projects 
+
+MVC Architectural Patterns
+ mvc= model-view-controller
+ -  it sperates application into  three main group of components which ggives us a better seperation of concerns
+  and  an easy way to achieve single responsibility prinsiples
+
+  what realy happemns is :
+  - user request are rouet to the controller
+  - the controller works with the Model to process the request
+  - after that the ontroller supplies back VIew and Model Data
+
+1. models
+- the model  is responsible for the aplication state and oerations on it
+- it is alao responsible for the business logic 
+- in our application there are different ways to imlement the model
+
+         there are two types of model
+		     1. Domain Model
+			     - it include all teh abstractions an services that allow the controller to operate at a higher lelvel of abstraction
+			 2. View Model 
+			 - it is used to transfere data  that the vew requires for displaying purposes
+			 3. Biniding Model
+			 -  it uses a .NET Core mechanism that maps data from the http request to action or mehod parameters
+			 - this model has no behavior and its just a simple contanier update
+			 4. API Model
+			 -it format the data into the form that is necessary for the api ...
+			 - in this way we dont have to modify or  expose the api or change the internal logic or the data model
+			 5 Persitsance Model
+			  -  it is used to map data between in memory objects and the database
+
+2. view
+-   a viewer are used to present information to the user through user inteface
+- theres no minimal amout of logic
+
+3. controller
+ controllers are components that handle user interactions
+  - tey work with the model
+  - the ultimatley select a view to render
+  - in an mvc application the view only display information and the controller handles  response to userinput
+  - the view also communicates witht the model that hadles business logic and get the proper information

@@ -1,0 +1,22 @@
+﻿in ths section we are to check :
+
+1. what are views
+2. what are layouts
+3. what are  partial Views
+4. what are view components.
+
+let us start with testing views 
+
+ we are going to look at what selenium is and how to use selenium to automate our view tests.
+ 
+remeber that views hould not handle any kind of data or any kind of process, that is
+why we have to use selenium to verify that a click somewhere goes to a proper page.
+
+so what is selenium? 
+ it is a tool that automates browser behavior
+ * it create robust, browser-based regression automation suites and tests
+ * it is easy t scale and redestribute sctipts accross many environments ...
+
+install selenium.
+ in you package manager console
+  install -package selenium.Chrome.WebDriver
